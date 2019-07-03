@@ -7,6 +7,7 @@ import Button from '../packages/button'
 import Menu from '../packages/menu'
 import Table from '../packages/table'
 import Form from '../packages/form'
+import Pager from '../packages/pager'
 
 storiesOf('Basic', module)
   .add('Button', () => {
@@ -33,6 +34,13 @@ storiesOf('Navigation', module)
           </Menu.SubMenu>
           <Menu.Item index="3">订单管理</Menu.Item>
         </Menu>
+      </div>
+    )
+  })
+  .add('Pager', () => {
+    return (
+      <div>
+        <Pager total={5}  onChange={(current)  =>  this.handleChange(current)} ></Pager>
       </div>
     )
   })
@@ -146,7 +154,7 @@ class FormDemo extends React.Component {
     return (
       <Form ref="form" model={this.state.form} rules={this.state.rules} labelWidth="80">
         <Form.Item label="活动名称" prop="name">
-          <input value={this.state.form.name} onChange={this.onChange.bind(this, 'name')}/>
+          <input value={this.state.form.name} onChange={this.onChange.bind(this, 'name')} />
         </Form.Item>
       </Form>
     )
