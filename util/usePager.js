@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react'
 function calculatePagerPages(current, total) {
     const arr = getUniqueArray(getOriginArray(current, total)).sort(
         (a, b) => a - b
@@ -77,3 +78,20 @@ function getUniqueArray(arr) {
     return results;
 }
 
+export default function usePager(current) {
+    const [pageNum, setValue] = useState(current)
+    const change = useCallback(
+        (nextValue) => {
+            setValue(nextValue);
+        },
+        [setValue]
+    );
+    //const [pages, setPages] = useState([])
+    // useEffect(() => {
+    //     setPages(calculatePagerPages(pageNum, total))
+    //     return () => {
+
+    //     };
+    // }, [pageNum])
+    return [pageNum, change]
+}
