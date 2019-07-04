@@ -8,6 +8,7 @@ import Menu from '../packages/menu'
 import Table from '../packages/table'
 import Form from '../packages/form'
 import Pager from '../packages/pager'
+import Switch from '../packages/switch'
 
 storiesOf('Basic', module)
   .add('Button', () => {
@@ -166,6 +167,16 @@ storiesOf('data Input', module)
     return (
       <div>
         <FormDemo></FormDemo>
+      </div>
+    )
+  })
+  .add('switch', () => {
+    function onChange(v){
+      console.log(v);
+    }
+    return (
+      <div>
+        <Switch onChange={onChange}></Switch>
       </div>
     )
   })
