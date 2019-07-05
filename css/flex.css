@@ -19,6 +19,9 @@
     flex-wrap: wrap;
 }
 
+.fs0 {
+    flex-shrink: 0;
+}
 .fx1 {
     box-sizing: border-box;
     flex: 1;
@@ -29,6 +32,3 @@
     flex: 2;
 }
 
-.fs0 {
-    flex-shrink: 0;
-}
