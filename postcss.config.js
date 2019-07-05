@@ -3,5 +3,6 @@ module.exports = {
       require('autoprefixer'),
       require('postcss-nested'),
       require('postcss-easing-gradients'),
+      require('postcss-import'),
     ]
   }

@@ -1,0 +1,61 @@
+@import 'common.scss';
+$fontSizes:(50, 38, 34,32, 30,28,25,22,20,18,15,12,10);
+@each $px in $fontSizes {
+    .fs#{$px} {
+        font-size: px2rem($px);
+    }
+}
+
+@each $alis,
+$color in $colors {
+    .color-#{$alis} {
+        color: $color;
+    }
+}
+
+@each $alis,
+$color in $colors {
+    .bg-#{$alis} {
+        background: $color;
+    }
+}
+
+@each $alis,
+$color in $colors {
+    .bd-#{$alis} {
+        border: 1px solid $color;
+    }
+}
+
+.tac {
+    text-align: center;
+}
+
+.tar {
+    text-align: right;
+}
+
+.vam {
+    vertical-align: middle;
+}
+
+.vat{
+    vertical-align: top;
+}
+
+.ellipsis1{
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+
+.ellipsis2 {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+

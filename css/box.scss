@@ -1,0 +1,252 @@
+@import 'common.scss';
+$boxSizes:(36, 54,60, 70, 80, 90, 100, 120, 150, 200, 250, 300, 340, 190, 254, 84, 212);
+$gapSizes:(10, 16, 20, 26, 30, 36, 40, 45, 50, 90, 120, 180);
+
+@for $n from 1 to 12 {
+    .col#{$n} {
+        width: $n*100/12#{'%'};
+        box-sizing: border-box;
+    }
+}
+
+@each $px in $boxSizes {
+    .w#{$px} {
+        width: px2rem($px);
+    }
+
+    .h#{$px} {
+        height: px2rem($px);
+    }
+
+    .lh#{$px} {
+        line-height: px2rem($px);
+    }
+
+    .wh#{$px} {
+        width: px2rem($px);
+        height: px2rem($px);
+    }
+}
+
+@each $px in $gapSizes {
+    .pd#{$px} {
+        padding: px2rem($px);
+    }
+
+    .pdtb#{$px} {
+        padding: px2rem($px) 0;
+    }
+
+    .pdlr#{$px} {
+        padding: 0 px2rem($px);
+    }
+}
+
+@each $alis,
+$dir in $dirs {
+    @each $px in $gapSizes {
+        .m#{$alis}#{$px} {
+            margin-#{$dir}: px2rem($px);
+        }
+
+        .pd#{$alis}#{$px} {
+            padding-#{$dir}: px2rem($px);
+        }
+    }
+}
+
+@each $alis,
+$dir in $dirs {
+    .bd#{$alis} {
+        border-#{$dir}: 1px solid $color1;
+    }
+}
+
+@each $alis,
+$dir in $dirs {
+    .m#{$alis}a {
+        margin-#{$dir}: auto;
+    }
+}
+
+.ma {
+    margin: auto;
+}
+
+.mlra {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mtba {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.bd0 {
+    border: 0 !important;
+}
+
+//多边框
+.bd {
+    border: 1px solid $color1;
+}
+
+.bbox {
+    box-sizing: border-box;
+}
+
+.h100p {
+    height: 100%;
+}
+
+.w100p {
+    width: 100%;
+}
+
+.wh100p {
+    width: 100%;
+    height: 100%;
+}
+
+.mh100p {
+    min-height: 100%;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.dt {
+    display: table;
+}
+
+.dg {
+    display: grid;
+}
+
+//图片
+//图标
+.icon {
+  
+}
+
+// 以下为页面中需要转化rem单位的单独处理
+//覆盖字号
+body {
+    background-color: white;
+}
+
+.line-gf {
+    height: 0.23rem;
+    background-color: #f6f6f8;
+}
+
+.pub-content {
+    padding-top: 10px;
+    overflow-x: hidden;
+}
+
+.pub-content img,.content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.fs-b {
+    font-weight: 800;
+}
+
+.mint-msgbox,
+.mint-msgbox-title,
+.mint-msgbox-btn {
+    @extend .fs32;
+}
+
+body,
+.mint-tab-item-label,
+.mint-button-text,
+.mint-cell-text,
+.mint-cell-value {
+    @extend .fs30;
+}
+
+.mint-field-clear i,
+.mint-toast-text {
+    @extend .fs28;
+}
+
+.mint-toast-text {
+    @extend .fs25;
+}
+
+.mint-button {
+    @extend .h70;
+}
+
+.mint-cell {
+    min-height: 0.96rem;
+}
+
+.mint-msgbox-btn {
+    @extend .h80;
+}
+
+.mint-cell .mint-cell-wrapper {
+    height: 100%;
+}
+
+.mint-button {
+    border-radius: 0.08rem;
+}
+
+.mint-msgbox-btns {
+    @extend .h80;
+    @extend .lh80;
+}
+
+.mint-msgbox-content {
+    padding: 0.2rem 0.4rem 0.3rem;
+    min-height: 0.72rem;
+}
+
+a {
+    display: flex;
+}
+
+.head {
+    @extend .lh90;
+    @extend .w100p;
+    @extend .bbox;
+    display: flex;
+    justify-content: center;
+    background-color: $blue;
+    color: white;
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.form-item .mint-cell-wrapper {
+    border: 1px solid $color1;
+    border-radius: 0.08rem;
+}
+
+.mint-toast-text {
+    font-size: 0.28rem;
+}
+
+.img-style {
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.mint-toast .mint-toast-icon {
+    font-size: 1.12rem;
+}

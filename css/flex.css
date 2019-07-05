@@ -1,0 +1,34 @@
+.df {
+    display: flex;
+}
+
+.df-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.ai {
+    align-items: center;
+}
+
+.jc {
+    justify-content: center;
+}
+
+.fw {
+    flex-wrap: wrap;
+}
+
+.fx1 {
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.fx2 {
+    box-sizing: border-box;
+    flex: 2;
+}
+
+.fs0 {
+    flex-shrink: 0;
+}

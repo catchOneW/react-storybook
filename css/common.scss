@@ -1,0 +1,26 @@
+$designWidth: 750;
+$dirs:( "t": "top", "r": "right", "b": "bottom", "l": "left");
+$color1:#CCCCCC;
+$blue:#018EE1;
+$green:#3bbd9c;
+$yellow:#FEAE12;
+$grayGap:#F0F0F0;
+$grayFont:#AFAFAF;
+$grayTitle:#666666;
+$graybg:#f6f6f8;
+$red:#F56C6C;
+$colors:(
+   "gray":$color1, 
+    "b": $blue,
+     "g": $green, 
+     "y": $yellow,
+      "gg": $grayGap,
+      "gf":$grayFont,
+      "gt":$grayTitle,
+      "gb":$graybg,
+      "w":white,
+      "r":$red
+      );
+@function px2rem($px) {
+    @return $px*7.5/$designWidth+rem;
+}

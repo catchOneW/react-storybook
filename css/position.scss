@@ -1,0 +1,33 @@
+@each $alis,
+$dir in $dirs {
+    .poa-#{$alis} {
+        @extend .poa;
+        #{$dir}: 0;
+    }
+    .poa-#{$alis}#{30} {
+        @extend .poa;
+        #{$dir}: px2rem(30);
+    }
+}
+
+.por {
+    position: relative;
+}
+
+.poa {
+    position: absolute;
+}
+
+.poa-c {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fixed-c {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

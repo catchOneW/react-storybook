@@ -1,0 +1,19 @@
+@import 'common.scss';
+.fll {
+    float: left;
+}
+
+.flr {
+    float: right;
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.clear::after {
+    content: '';
+    clear: both;
+    display: block;
+}
