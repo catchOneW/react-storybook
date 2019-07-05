@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/button.css'
 function Button() {
   return (
-    <button className='btn'>1</button>
+    <button className='btn cubic-bezier'>11111111111111111</button>
   )
 }
 export default Button

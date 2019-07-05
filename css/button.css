@@ -1,3 +1,5 @@
 .btn{
+    height:100px;
     color: red;
+    background: linear-gradient(to right, black,red,green,blue, transparent);
 }
